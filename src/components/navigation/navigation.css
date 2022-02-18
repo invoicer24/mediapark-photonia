@@ -1,0 +1,152 @@
+.navigation {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  width: 100%;
+  height: 80px;
+  background-color: #484671;
+  padding: 0 40px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.2);
+  grid-template-areas:
+    "logo search-bar login-logout"
+}
+
+.logo {
+  grid-area: logo;
+  margin: auto 0;
+}
+
+.logo img {
+  max-width: 300px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.search-bar {
+  grid-area: search-bar;
+  display: flex;
+  height: 50px;
+  max-width: 500px;
+  width: 100%;
+  padding: 15px;
+  z-index: 10;
+}
+
+.search-bar-input-dropdown {
+  width: 100%;
+}
+
+.search-bar-dropdown {
+  width: calc(100% + 40px);
+  border: 1px solid #484671;
+  border-radius: 0 0 3px 3px;
+  margin-top: 15px;
+  background-color: #fff;
+}
+
+.search-bar-dropdown p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  height: 50px;
+  padding-left: 40px;
+  color: #484671;
+  cursor: pointer;
+}
+
+.search-bar-dropdown p:hover {
+  color: #fff;
+  background-color: #484671;
+}
+
+.search-bar-input {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  color: #484671;
+  padding-left: 40px;
+}
+
+.search-bar-input::placeholder {
+  opacity: .5;
+  font-style: italic;
+}
+
+.search-bar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 100%;
+  background-color: #fff;
+  margin-left: 55px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-bar-button:hover {
+  opacity: .8;
+}
+
+.search-bar-button img {
+  height: 30px;
+}
+
+.login-logout {
+  grid-area: login-logout;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+.login-logout p, .search-bar-input, .search-bar-dropdown p {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .navigation {
+    height: 90px;
+    padding: 0 15px;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 30px 60px;
+    grid-template-areas:
+      "logo login-logout" 
+      "search-bar search-bar"
+  }
+
+  .logo {
+    max-width: 200px;
+  }
+
+  .logo img {
+    padding-top: 8px;
+  }
+
+  .search-bar {
+    height: 30px;
+    max-width: 100%;
+    padding: 15px 0;
+  }
+
+  .search-bar-button {
+    min-width: 30px;
+  }
+
+  .search-bar-button img {
+    height: 15px;
+  }
+
+  .login-logout p, .search-bar-input, .search-bar-dropdown p {
+    font-size: 18px;
+  }
+
+  .search-bar-dropdown p {
+    height: 30px;
+    padding-left: 15px;
+  }
+}

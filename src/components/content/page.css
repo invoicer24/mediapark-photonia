@@ -1,0 +1,44 @@
+.page {
+  padding: 0 40px;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #484671;
+  font-size: 30px;
+  margin: 0;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 0 15px;
+  }
+}
