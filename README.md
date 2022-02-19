@@ -8,10 +8,11 @@
 [![Package Control total downloads](https://img.shields.io/packagecontrol/dt/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
 [![Bitbucket issues](https://img.shields.io/bitbucket/issues/lbesson/bin.svg)](https://Bitbucket.org/lbesson/bin/issues/)
 
+The second best photo liking app on entire internet (after instagram). 
+
 With each refresh click, you get the latest photos of people from all over the world. But if you haven’t found what you want, you can search by your needs.
 
 And gues what? Yes! You can Like it!
-
 
 
 # Demo-Preview
