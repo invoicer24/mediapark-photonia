@@ -4,9 +4,11 @@
 
 <!-- Add buttons here -->
 
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://bitbucket.org/virtualistudija/mediapark-photonia)
-[![Package Control total downloads](https://img.shields.io/packagecontrol/dt/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
-[![Bitbucket issues](https://img.shields.io/bitbucket/issues/lbesson/bin.svg)](https://Bitbucket.org/lbesson/bin/issues/)
+![](https://img.shields.io/github/last-commit/invoicer24/mediapark-photonia)
+![](https://img.shields.io/github/watchers/invoicer24/mediapark-photonia.svg)
+![](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+
 
 The second best photo liking app on entire internet (after instagram). 
 
