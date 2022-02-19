@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from 'react'
 import './App.css'
 import Navigation from './components/navigation/navigation'
-import Page from './components/content/page'
+import Page from './components/content/pageTemplate'
 import PhotoItem from './components/content/home/photoItem/photoItem'
 import Pagination from './components/content/home/pagination/pagination'
 import axios from 'axios'
@@ -18,8 +18,8 @@ function App() {
   const [searchTermToShowOnTitle, setSearchTermToShowOnTitle] = useState('')
   const [loading, setLoading] = useState(false)
   
-  const [localStorageWords, setLocalStorageWords] = useLocalStorage('', [])
-  const [authToken] = useLocalStorage('Bearer', '')
+  const [localStorageWords, setLocalStorageWords] = useLocalStorage('Words', [])
+  const [authToken] = useLocalStorage('Bearer', null)
 
   // FETCH PHOTOS
   useEffect(() => {
@@ -104,10 +104,13 @@ function App() {
         localStorage={localStorageWords}
         takeSearchTerm={(word) => handleTakenSearchTerm(word)}
       />
-      {loading
+      {state.error
+        && <Page title={state.error} error/>
+      }
+      {loading && !state.error
         ? <Loader/>
         : <>
-            <Page title={searchTermToShowOnTitle && `"${searchTermToShowOnTitle}"`} error={state.error} grid>
+            <Page title={searchTermToShowOnTitle && `"${searchTermToShowOnTitle}"`}>
               {state.photos.map(photo => <PhotoItem
                 id={photo.id}
                 key={photo.id} 

@@ -5,7 +5,7 @@
   margin-bottom: 40px;
 }
 
-.grid {
+.page-content {
   display: grid;
   box-sizing: border-box;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -15,6 +15,7 @@
 
 .page-title {
   display: flex;
+  padding-top: 70px;
   align-items: center;
   justify-content: center;
   color: #484671;
@@ -23,22 +24,25 @@
 }
 
 .error {
-  text-align: center;
   color: red;
 }
 
 @media only screen and (max-width: 900px) {
-  .grid {
+  .page-content {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .grid {
+  .page-content {
     grid-template-columns: 1fr;
   }
 
   .page {
     padding: 0 15px;
+  }
+
+  .page-title p {
+    margin-bottom: 15px;
   }
 }

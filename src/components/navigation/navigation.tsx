@@ -17,7 +17,7 @@ interface Props {
 
 const Navigation = ({ searchTerm, changeSearchTerm, takeSearchTerm, handleKeypress, searchPhotos, localStorage }: Props) => {
   const { state, dispatch } = useContext(StateContext)
-  const [authToken, setAuthToken] = useLocalStorage('Bearer', '')
+  const [authToken, setAuthToken] = useLocalStorage('Bearer', null)
   
   useEffect(() => {
     let code: boolean | string | null = false
@@ -33,7 +33,8 @@ const Navigation = ({ searchTerm, changeSearchTerm, takeSearchTerm, handleKeypre
           setAuthToken(res.data.access_token)
           dispatch({ type: 'LOGIN', payload: res.data.access_token })
         }
-      )}
+      ).catch(err => dispatch({ type: 'SET_ERROR', payload: err.response.status }))
+    }
   }, [])
  
   const [showDropdown, setShowDropdown] = useState(false)
@@ -81,7 +82,7 @@ const Navigation = ({ searchTerm, changeSearchTerm, takeSearchTerm, handleKeypre
       </div>
       {/* LOGIN / LOGOUT */}
       <div className='login-logout'>        
-        {state.isAuth !== ''
+        {state.isAuth
           ? <p onClick={() => dispatch({ type: 'LOGOUT' })}>Log Out</p>
           : <a href={`${URL}/authorize?client_id=${process.env.REACT_APP_ACCESS_KEY}&redirect_uri=${encodeURIComponent(process.env.REACT_APP_HOST!)}&response_type=code&scope=public+write_likes+read_photos+read_user+write_user+write_photos`}><p>Log In</p></a>
         }

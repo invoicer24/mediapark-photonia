@@ -3,7 +3,7 @@ import React, { useReducer, createContext } from 'react'
 type Error = number | string | null
 
 interface State {
-  isAuth: string
+  isAuth: null | string
   photos: Array<any>
   pageNumber: number
   error: Error
@@ -15,12 +15,12 @@ type Action =
   | { type: 'PAGE_UP' }
   | { type: 'PAGE_DOWN' }
   | { type: 'PAGE_RESET' }
-  | { type: 'LOGIN', payload: string }
+  | { type: 'LOGIN', payload: null | string }
   | { type: 'LOGOUT' }
   | { type: 'UPDATE_PHOTO', payload: {[key: string]: any}}
 
 const initialState = {
-  isAuth: '',
+  isAuth: null,
   photos: [],
   pageNumber: 1,
   error: null
@@ -91,9 +91,10 @@ export const StateContextProvider: React.FC = ({ children }) => {
             }
           case 'LOGOUT':
             localStorage.removeItem('Bearer')
+            window.location.href = '/'
             return {
               ...state,
-              isAuth: ''
+              isAuth: null
             }
           case 'UPDATE_PHOTO':
             const updatedPhotos = state.photos.map(photo => {

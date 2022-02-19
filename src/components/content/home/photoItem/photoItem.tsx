@@ -25,7 +25,7 @@ const PhotoItem = ({ id, url, likes, isUserLiked, alt }: Props) => {
       responseType: "json"
     })
     .then(res => dispatch({ type: 'UPDATE_PHOTO', payload: res.data.photo }))
-    .catch(res => console.log(res))
+    .catch(err => dispatch({ type: 'SET_ERROR', payload: err.response.status }))
   }
 
   // DISLIKE PHOTO
@@ -36,7 +36,7 @@ const PhotoItem = ({ id, url, likes, isUserLiked, alt }: Props) => {
       }
     })
     .then(res => dispatch({ type: 'UPDATE_PHOTO', payload: res.data.photo }))
-    .catch(res => console.log(res))
+    .catch(err => dispatch({ type: 'SET_ERROR', payload: err.response.status }))
   }
 
   return (
@@ -51,7 +51,7 @@ const PhotoItem = ({ id, url, likes, isUserLiked, alt }: Props) => {
           </div>
         : <div className='photo-item-navigation' onClick={() => likePhoto(id)}>
             <img src="images/icons/like.svg" alt="like" />
-            <p>{likes} {`${state.isAuth === '' ? '(Login to Like)' : ''}`}</p>
+            <p>{likes} {`${!state.isAuth ? '(Login to Like)' : ''}`}</p>
           </div>
       }
       

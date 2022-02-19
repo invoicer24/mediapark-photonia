@@ -4,135 +4,78 @@
 
 <!-- Add buttons here -->
 
-![Bitbucket release (latest by date including pre-releases)](https://img.shields.io/github/v/release/navendu-pottekkat/awesome-readme?include_prereleases)
-![Bitbucket last commit](https://img.shields.io/github/last-commit/navendu-pottekkat/awesome-readme)
-![Bitbucket issues](https://img.shields.io/github/issues-raw/navendu-pottekkat/awesome-readme)
-![Bitbucket pull requests](https://img.shields.io/github/issues-pr/navendu-pottekkat/awesome-readme)
-
-The second best photos liking app on entire internet (after instagram).
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://bitbucket.org/virtualistudija/mediapark-photonia)
+[![Package Control total downloads](https://img.shields.io/packagecontrol/dt/SwitchDictionary.svg)](https://packagecontrol.io/packages/SwitchDictionary)
+[![Bitbucket issues](https://img.shields.io/bitbucket/issues/lbesson/bin.svg)](https://Bitbucket.org/lbesson/bin/issues/)
 
 With each refresh click, you get the latest photos of people from all over the world. But if you haven’t found what you want, you can search by your needs.
 
 And gues what? Yes! You can Like it!
 
-## Demo-Preview
-<!-- Add a demo for your project -->
 
-After you have written about your project, it is a good idea to have a demo/preview(**video/gif/screenshots** are good options) of your project so that people can know what to expect in your project. You could also add the demo in the previous section with the product description.
 
-Here is a random GIF as a placeholder.
+# Demo-Preview
 
-![](https://bitbucket.org/virtualistudija/files/src/master/photonia.gif)
+User friendly...
+
+![](https://media.giphy.com/media/UhNfKwbM8S7OhIsTQk/giphy.gif)
+
+... and responsive design
+
+![](https://media.giphy.com/media/N2q12ggAe8GESy27XN/giphy.gif)
 
 # Table of contents
-
-After you have introduced your project, it is a good idea to add a **Table of contents** or **TOC** as **cool** people say it. This would make it easier for people to navigate through your README and find exactly what they are looking for.
-
-Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README.
 
 - [Project Title](#project-title)
 - [Demo-Preview](#demo-preview)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Photo search](#photo-search)
+  - [Login](#login)
+  - [Liking photos](#liking-photos)
+  - [Log out](#log-out)
 - [Development](#development)
-- [Contribute](#contribute)
-    - [Sponsor](#sponsor)
-    - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
-- [License](#license)
 - [Footer](#footer)
 
 # Installation
 [(Back to top)](#table-of-contents)
 
-*You might have noticed the **Back to top** button(if not, please notice, it's right there!). This is a good idea because it makes your README **easy to navigate.*** 
-
-The first one should be how to install(how to generally use your project or set-up for editing in their machine).
-
-This should give the users a concrete idea with instructions on how they can use your project repo with all the steps.
-
-Following this steps, **they should be able to run this in their device.**
-
-A method I use is after completing the README, I go through the instructions from scratch and check if it is working.
-
-Here is a sample instruction:
-
 To use this project, first clone the repo on your device using the command below:
 
 ```git init```
 
-```git clone https://github.com/navendu-pottekkat/nsfw-filter.git```
+```git clone https://virtualistudija@bitbucket.org/virtualistudija/mediapark-photonia.git```
 
 # Usage
 [(Back to top)](#table-of-contents)
 
-This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also.
+## Photo search
+In the search box, you can enter your desired word or choose from the five search suggestions you've entered below (no duplicates). You can start the search by pressing the button next to the search box, or by pressing **ENTER** button on your keyboard.
+
+## Login
+You must be logged in to like photos. This button is at the top right. You will also need an unsplash.com membership.
+
+## Liking photos
+Once you are logged in, all you have to do is select the photo you like and press the button below with **thumb up**. If you accidentally clicked on a photo, or just don't like it anymore, press the button below with **thumb down**.
+
+## Log out
+After all your photo-enjoying experience, we recommend that you sign out of the app to accidentally like the photos you don't really like. The button is in the same location as the login button.
 
 # Development
 [(Back to top)](#table-of-contents)
 
-This is the place where you give instructions to developers on how to modify the code.
+Original .env is not included, but you can find .env.test
 
-You could give **instructions in depth** of **how the code works** and how everything is put together.
+To start development server, follow this instruction:
 
-You could also give specific instructions to how they can setup their development environment.
+* ```npm install```
+* Delete **.test** part from **.env.test**
+* In new **.env** file enter **unsplash.com** **access** & **secret** keys
+* ```npm start```
 
-Ideally, you should keep the README simple. If you need to add more complex explanations, use a wiki. Check out [this wiki](https://github.com/navendu-pottekkat/nsfw-filter/wiki) for inspiration.
-
-# Contribute
-[(Back to top)](#table-of-contents)
-
-This is where you can let people know how they can **contribute** to your project. Some of the ways are given below.
-
-Also this shows how you can add subsections within a section.
-
-### Sponsor
-[(Back to top)](#table-of-contents)
-
-Your project is gaining traction and it is being used by thousands of people(***with this README there will be even more***). Now it would be a good time to look for people or organisations to sponsor your project. This could be because you are not generating any revenue from your project and you require money for keeping the project alive.
-
-You could add how people can sponsor your project in this section. Add your patreon or GitHub sponsor link here for easy access.
-
-A good idea is to also display the sponsors with their organisation logos or badges to show them your love!(*Someday I will get a sponsor and I can show my love*)
-
-### Adding new features or fixing bugs
-[(Back to top)](#table-of-contents)
-
-This is to give people an idea how they can raise issues or feature requests in your projects. 
-
-You could also give guidelines for submitting and issue or a pull request to your project.
-
-Personally and by standard, you should use a [issue template](https://github.com/navendu-pottekkat/nsfw-filter/blob/master/ISSUE_TEMPLATE.md) and a [pull request template](https://github.com/navendu-pottekkat/nsfw-filter/blob/master/PULL_REQ_TEMPLATE.md)(click for examples) so that when a user opens a new issue they could easily format it as per your project guidelines.
-
-You could also add contact details for people to get in touch with you regarding your project.
-
-# License
-[(Back to top)](#table-of-contents)
-
-Adding the license to README is a good practice so that people can easily refer to it.
-
-Make sure you have added a LICENSE file in your project folder. **Shortcut:** Click add new file in your root of your repo in GitHub --> Set file name to LICENSE --> GitHub shows LICENSE templates ---> Choose the one that best suits your project!
-
-I personally add the name of the license and provide a link to it like below.
-
-[GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
 
 # Footer
 [(Back to top)](#table-of-contents)
 
-Let's also add a footer because I love footers and also you **can** use this to convey important info.
-
-Let's make it an image because by now you have realised that multimedia in images == cool(*please notice the subtle programming joke).
-
-So that is it... You have completed your training young grasshopper. Now it is time for you to use this ideas for your projects.
-
-Don't forget your **README Sensei**(*cool twitter handle idea*) when your project takes off with your **Awesome README**.
-
-Leave a star in GitHub, give a clap in Medium and share this guide if you found this helpful.
-
-**Now folks, the moment you've all been waiting for! The footer!**
-***[Audible gasp]***
-
-<!-- Add the footer here -->
-
-![Footer](https://github.com/navendu-pottekkat/awesome-readme/blob/master/fooooooter.png)
+I would like to thank the entire Mediapark team for the opportunity. Stay cool and keep going!!!
