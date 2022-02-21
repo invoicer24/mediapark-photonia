@@ -48,7 +48,7 @@ To use this project, first clone the repo on your device using the command below
 
 ```git init```
 
-```git clone https://virtualistudija@bitbucket.org/virtualistudija/mediapark-photonia.git```
+```https://github.com/invoicer24/mediapark-photonia.git```
 
 # Usage
 [(Back to top)](#table-of-contents)
